@@ -2,7 +2,7 @@
 
 buildscript {
     repositories {
-       
+        mavenCentral()
         jcenter()
     }
     //noinspection GroovyAssignabilityCheck,GroovyUntypedAccess
@@ -15,7 +15,7 @@ buildscript {
 
 allprojects {
     repositories {
-       
+        mavenCentral()
         jcenter()
     }
 }
