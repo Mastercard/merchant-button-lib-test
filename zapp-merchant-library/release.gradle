@@ -1,5 +1,6 @@
 // ./gradlew clean build :zapp-merchant-library:generateLibraryRelease
 apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 def localReleaseDest = "${buildDir}/release/${version}"
 
@@ -52,4 +53,15 @@ generateLibraryRelease.dependsOn(zipRelease)
 artifacts {
     archives sourcesJar
     archives javadocsJar
+}
+
+publishing {
+    publications {
+        library(MavenPublication) {
+            groupId project.PUBLISH_GROUP_ID
+            artifactId project.PUBLISH_ARTIFACT_ID
+            version project.PUBLISH_VERSION
+            artifact("artifact/release-3.1.2.zip")
+        }
+    }
 }
