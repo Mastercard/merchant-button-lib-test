@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'jacoco'
 
 ext {
-    PUBLISH_GROUP_ID = 'com.testzapp.library'
-    PUBLISH_ARTIFACT_ID = 'merchantlib'
+    PUBLISH_GROUP_ID = 'com.zapp.library'
+    PUBLISH_ARTIFACT_ID = 'merchant'
     PUBLISH_VERSION = '3.1.2'
 }
 
